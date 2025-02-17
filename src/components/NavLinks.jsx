@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function NavLinks() {
   const navlinksStyle = {
     display: "flex",
@@ -14,20 +16,22 @@ function NavLinks() {
   };
 
   return (
-    <ul style={navlinksStyle}>
-      <li>
-        <a href="#">MENU</a>
-      </li>
-      <li>
-        <a href="#">LOCATION</a>
-      </li>
-      <li>
-        <a href="#">ABOUT</a>
-      </li>
-      <li>
-        <a href="#">CONTACT</a>
-      </li>
-    </ul>
+    <nav>
+      <ul style={navlinksStyle}>
+        <li>
+          <NavLink to="/menu">MENU</NavLink>
+        </li>
+        <li>
+          <NavLink to="/location">LOCATION</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">ABOUT</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">CONTACT</NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
